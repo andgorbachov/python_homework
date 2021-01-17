@@ -29,6 +29,7 @@ for (let i = 0; i <= number; i++) {
 		sum += i;
 		counter++;
 	}
+	if (counter > 10) break;
 }
 
 console.log(sum);
