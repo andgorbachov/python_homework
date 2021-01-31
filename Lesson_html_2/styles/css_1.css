@@ -1,0 +1,71 @@
+/*Homework 2.1.1*/
+/*1.Первый уровень
+Создайте новый проект с HTML и CSS файлами.
+Вставьте на страницу блок с цитатой (о теге читем тут).
+Подключите CSS на созданной вами странице 3-мя способами (с помощью тега style, атрибута style и файла стилей style.css).
+Задайте цитате 3 разных варианта цвета (синий, красный и зеленый соответственно)для каждого из вариантов подключения. Проанализируйте, какой из стилей имеет наивысший приоритет.
+*/
+blockquote {
+    margin: 10px;
+}
+blockquote p {
+    padding: 15px;
+    font-weight: bold;
+}
+blockquote p{
+	color: green;
+}
+
+/*Homework 2.1.2*/
+/*2.Второй уровень
+У вас есть исходный код:
+Напишите CSS-селектор, который:
+1) обратиться только к тем ссылкам, значение атрибута href которых начинается с https и сделайте их красным цветом
+2) применится только для последней ссылки в первом cписке (link6) и задаст ей зеленый фоновый цвет
+3) будет действовать только для <p>, который идет после <ul> и задаст размер шрифта 26px
+*/
+div.holder a[href^="https://"]{
+	color: red;
+}
+div.holder ul.list > li:last-child a{
+	background: green;
+}
+ul + p{
+	font-size: 26px;
+}
+
+/*Homework 2.1.3*/
+/*3.Второй уровень (“работаю с css-ом”)
+Оформите элементы согласно их содержимому (html не изменяем!):
+*/
+div.text-box h3:first-child{
+	color: pink;
+}
+#greycol{
+	color: grey;
+}
+div.text-box div > p{
+	color: red;
+}
+div.text-box p:nth-last-child(2){
+	color: green;
+}
+div.text-box p.yellow{
+	color: yellow;
+}
+
+/*Homework 2.1.4*/
+/*4.Кто совсем молодец ("по желанию")
+У вас есть html, котрый нельзя изменить. Используем только стили!
+*/
+div.bg-box{
+	background: 
+		url(..//images/house.jpg) center/600px no-repeat,		
+		url(..//images/grass.png) bottom/200px repeat-x,
+		url(..//images/lamp.png) top/38px repeat-x,
+		url(..//images/hedgehog.png) left/30px repeat-y,
+		url(..//images/donut.png) right/30px repeat-y,
+		green;
+	width: 100%;
+	height: 100vh;
+}
