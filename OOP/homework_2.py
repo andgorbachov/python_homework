@@ -39,5 +39,7 @@ recruiter.salary = 50
 
 print(programmer.work())
 print(programmer.check_salary(15))
+print(programmer.__str__())
 print(recruiter.work())
 print(recruiter.check_salary(15))
+print(recruiter.__str__())
