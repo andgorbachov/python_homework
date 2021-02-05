@@ -11,6 +11,11 @@ class Employee(object):
 
 
 class Recruiter(Employee):
+    def __init__(self, name, email, salary):
+        self.name = name
+        self.email = email
+        self.salary = salary
+
     def work(self):
         return super().work() + 'and start hiring.'
 
@@ -19,6 +24,11 @@ class Recruiter(Employee):
 
 
 class Programmer(Employee):
+    def __init__(self, name, email, salary):
+        self.name = name
+        self.email = email
+        self.salary = salary
+
     def work(self):
         return super().work() + 'and start coding.'
 
@@ -28,14 +38,8 @@ class Programmer(Employee):
 
 ####################
 
-programmer = Programmer()
-programmer.name = 'Oleg'
-programmer.email = "oleg@nomail.com"
-programmer.salary = 100
-recruiter = Recruiter()
-recruiter.name = 'Anna'
-recruiter.email = "anna@nomail.com"
-recruiter.salary = 50
+programmer = Programmer('Oleg', "oleg@nomail.com", 100)
+recruiter = Recruiter('Anna', "anna@nomail.com", 50)
 
 print(programmer.work())
 print(programmer.check_salary(15))
