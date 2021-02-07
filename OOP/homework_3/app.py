@@ -25,4 +25,3 @@ if __name__ == '__main__':
     print(candidate_kolya.__str__())
     print(vacancy_python_middle.__str__())
     print(vacancy_python_senior.__str__())
-
