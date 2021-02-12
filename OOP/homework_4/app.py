@@ -1,5 +1,3 @@
-import sys
-import traceback
 from datetime import datetime
 
 from models import Candidate, Vacancy
@@ -12,10 +10,10 @@ def write_log(exception):
     try:
         message = exception.message
     except AttributeError:
-        message = exception
+        message = ''
 
     log_file.writelines(f"date: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')},"
-                        f" exception type:{exception.__class__}, "
+                        f" exception type:{exception.__repr__()}, "
                         f"Message: {message}, \n"
                         f"traceback: {exception.__traceback__}\n")
     log_file.close()
