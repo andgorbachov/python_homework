@@ -89,4 +89,4 @@ class Vacancy(object):
 
 class UnableToWorkException(Exception):
     def __init__(self):
-        self.message = "I’m not hired yet, lol."
+        self.message = "I'm not hired yet, lol."
