@@ -1,7 +1,6 @@
 from random import randint
 from exceptions import EnemyDown
 from exceptions import GameOver
-# from helper import HelperManager
 import settings
 
 
@@ -65,10 +64,6 @@ class Player(object):
             player_attack = input()
             if player_attack in ('1', '2', '3'):
                 break
-        # print(settings.enter_attack_message)
-        # inp = input()
-        # player_attack = HelperManager.manage_input(player_attack)
-
         enemy_attack = enemy_obj.select_attack()
         result = self.fight(int(player_attack), enemy_attack)
         if result == 0:
@@ -87,10 +82,6 @@ class Player(object):
             player_defence = input()
             if player_defence in ('1', '2', '3'):
                 break
-        # print(settings.enter_defense_message)
-        # inp = input()
-        # player_defence = HelperManager.manage_input(player_defence)
-
         enemy_attack = enemy_obj.select_attack()
         result = self.fight(int(player_defence), enemy_attack)
         if result == 0:
